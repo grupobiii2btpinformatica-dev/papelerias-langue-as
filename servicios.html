@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de fotocopiado veloz, impresiones a color, anillados, plastificado y armado de listas escolares en Langue, Valle.">
+  <title>Servicios | Papelerías Langueñas</title>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="img/logo.png" alt="Logotipo Oficial de Papelerías Langueñas" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <h1>Papelerías Langueñas</h1>
+          <span>Langue, Valle, Honduras</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="btn-cart-nav" id="openCartBtn">
+              🛒 Mi Lista <span class="cart-counter" id="cartCounter">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <h1>Servicios y Reprografía</h1>
+      <p>Soluciones rápidas, precisas y confiables para trámites, tareas y oficinas en Langue.</p>
+    </section>
+
+    <!-- Lista de Servicios -->
+    <section class="content-section">
+      <div class="services-grid">
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">🖨️</div>
+          <h3>Fotocopiado e Impresiones</h3>
+          <p>Equipos de alta velocidad láser y de inyección en negro y full color en tamaños carta y oficio sobre bond, satinado y opalina.</p>
+        </article>
+
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">📑</div>
+          <h3>Anillados & Encuadernaciones</h3>
+          <p>Organización resistente de tesis, informes escolares, cuadernillos didácticos y manuales con cubiertas plásticas duraderas.</p>
+        </article>
+
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">🛡️</div>
+          <h3>Plastificado Térmico</h3>
+          <p>Protección contra la humedad y el desgaste para certificados, partidas de nacimiento, carnets estudiantiles y diplomas.</p>
+        </article>
+
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">📤</div>
+          <h3>Escaneo & Digitalización</h3>
+          <p>Digitalización de documentos y fotos en alta resolución listos para adjuntar en trámites oficiales o enviar por WhatsApp.</p>
+        </article>
+
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">🎨</div>
+          <h3>Elaboración de Material Cívico</h3>
+          <p>Rotulación y diseño de murales, pancartas y láminas escolares para fiestas patrias y exposiciones científicas.</p>
+        </article>
+
+        <article class="service-card">
+          <div style="font-size: 2.2rem;">📦</div>
+          <h3>Armado de Listas de Útiles</h3>
+          <p>Entrega tu lista escolar y la preparamos empaquetada lista para recoger en tu papelería de preferencia sin demoras.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Drawer Carrito -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Mi Lista de Artículos</h3>
+      <button class="modal-close-btn" id="closeCartBtn">✕</button>
+    </div>
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+    <div id="cartEmptyNotice" style="padding: 2.5rem; text-align: center; color: #6b7280;">Tu lista se encuentra vacía.</div>
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-exclusive-branch-box" id="cartExclusiveBranchBox"></div>
+      <button class="btn-clear-cart" id="clearCartBtn">Vaciar lista para ordenar en otra papelería</button>
+      <button class="btn-send-whatsapp-order" id="sendWhatsAppOrderBtn">📲 Enviar Pedido a WhatsApp</button>
+    </div>
+  </aside>
+
+  <a href="https://wa.me/50432826211" class="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.124-.518-1.527-.633-2.52-2.184-2.597-2.285-.077-.101-.62-8.27-.62-1.58 0-.753.395-1.123.535-1.267.14-.144.306-.18.408-.18.102 0 .204.002.293.007.094.005.219-.036.342.26.126.307.433 1.054.471 1.132.038.077.064.168.013.27-.051.102-.077.166-.153.255-.077.09-.161.2-.23.27-.077.078-.158.163-.068.318.09.155.4 1.134.858 1.543.59.525 1.088.688 1.243.766.155.077.247.068.339-.038.093-.105.395-.46.501-.617.106-.157.211-.131.354-.078.144.053.91.429 1.068.508.158.078.263.118.302.183.039.065.039.378-.105.783z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Papelerías Langueñas</h3>
+        <p>Tu aliado escolar y comercial en Langue, Valle, Honduras.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sucursales</h4>
+        <ul class="branch-contact-list">
+          <li><strong>Yannet:</strong> Barrio El Centro | +504 3282-6211</li>
+          <li><strong>Alejandrina:</strong> Barrio El Centro | +504 9876-5432</li>
+          <li><strong>San Antonio:</strong> Barrio El Calvario | +504 8765-4321</li>
+          <li><strong>Patty:</strong> Barrio El Polivalente | +504 9512-3456</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Papelerías Langueñas. Todos los derechos reservados.</p>
+      <p class="footer-credits">Desarrolladores web: Estudiantes de III-2 de BTP de Informática del Instituto Técnico Contable J.F.K. 2026.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

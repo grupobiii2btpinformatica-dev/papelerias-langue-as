@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la trayectoria, misión, visión y los propietarios de las cuatro papelerías de Langue, Valle.">
+  <title>Nosotros | Papelerías Langueñas</title>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="img/logo.png" alt="Logotipo Oficial de Papelerías Langueñas" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <h1>Papelerías Langueñas</h1>
+          <span>Langue, Valle, Honduras</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="btn-cart-nav" id="openCartBtn">
+              🛒 Mi Lista <span class="cart-counter" id="cartCounter">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <h1>Nuestra Historia & Compromiso</h1>
+      <p>Cuatro familias emprendedoras unidas para impulsar el desarrollo estudiantil y profesional del municipio de Langue.</p>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="content-section">
+      <div class="about-grid">
+        <article class="about-card">
+          <h3>🎯 Nuestra Misión</h3>
+          <p>
+            Proveer a estudiantes, docentes, profesionales y familias de Langue y sus comunidades aledañas una oferta permanente y accesible de materiales educativos, útiles escolares y servicios reprográficos de primer nivel, garantizando un servicio cálido y confiable.
+          </p>
+        </article>
+
+        <article class="about-card">
+          <h3>🌟 Nuestra Visión</h3>
+          <p>
+            Ser el referente integrador líder en suministros pedagógicos y de oficina en el sur de Honduras, combinando la cercanía del comercio tradicional con canales digitales ágiles para resolver las necesidades educativas sin intermediarios innecesarios.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Propietarios y Galería -->
+    <section class="content-section">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Nuestros Locales y Propietarios</h2>
+        <p class="section-subtitle">Familias de tradición al servicio de la educación en Langue</p>
+      </div>
+
+      <div class="about-grid" style="margin-bottom: 3rem;">
+        <div>
+          <img src="img/propietario.jpg" alt="Propietarios de las papelerías de Langue" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);" loading="lazy">
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem; color: var(--alejandrina-primary);">
+            Comercio Local con Rostro Humano
+          </h3>
+          <p style="margin-bottom: 1rem;">
+            Cada tienda está liderada por sus fundadores: <strong>Yannet Rodríguez</strong> (Papelería Yannet), <strong>Alejandrina Canales</strong> (Papelería Alejandrina), <strong>Marco Antonio Bonilla</strong> (Papelería San Antonio) y <strong>Patricia Santos</strong> (Papelería Patty).
+          </p>
+          <p>
+            Conocemos los requerimientos académicos locales y nos aseguramos de que cada lista escolar cuente con existencias disponibles sin obligar a los padres a desplazarse fuera del municipio.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="img/equipo.jpg" alt="Equipo de trabajo de las papelerías" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/galeria-1.jpg" alt="Área de atención y mostradores" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/galeria-2.jpg" alt="Estantes con variedad de cuadernos" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/galeria-3.jpg" alt="Sección de manualidades y arte" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/galeria-4.jpg" alt="Zona de reprografía y anillados" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/galeria-6.jpg" alt="Fachada exterior de local en Langue" loading="lazy"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Drawer Carrito -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Mi Lista de Artículos</h3>
+      <button class="modal-close-btn" id="closeCartBtn">✕</button>
+    </div>
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+    <div id="cartEmptyNotice" style="padding: 2.5rem; text-align: center; color: #6b7280;">Tu lista se encuentra vacía.</div>
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-exclusive-branch-box" id="cartExclusiveBranchBox"></div>
+      <button class="btn-clear-cart" id="clearCartBtn">Vaciar lista para ordenar en otra papelería</button>
+      <button class="btn-send-whatsapp-order" id="sendWhatsAppOrderBtn">📲 Enviar Pedido a WhatsApp</button>
+    </div>
+  </aside>
+
+  <a href="https://wa.me/50432826211" class="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.124-.518-1.527-.633-2.52-2.184-2.597-2.285-.077-.101-.62-8.27-.62-1.58 0-.753.395-1.123.535-1.267.14-.144.306-.18.408-.18.102 0 .204.002.293.007.094.005.219-.036.342.26.126.307.433 1.054.471 1.132.038.077.064.168.013.27-.051.102-.077.166-.153.255-.077.09-.161.2-.23.27-.077.078-.158.163-.068.318.09.155.4 1.134.858 1.543.59.525 1.088.688 1.243.766.155.077.247.068.339-.038.093-.105.395-.46.501-.617.106-.157.211-.131.354-.078.144.053.91.429 1.068.508.158.078.263.118.302.183.039.065.039.378-.105.783z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Papelerías Langueñas</h3>
+        <p>Al servicio de los niños, jóvenes y profesionales del municipio de Langue, Valle.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sucursales</h4>
+        <ul class="branch-contact-list">
+          <li><strong>Yannet:</strong> Barrio El Centro | +504 3282-6211</li>
+          <li><strong>Alejandrina:</strong> Barrio El Centro | +504 9876-5432</li>
+          <li><strong>San Antonio:</strong> Barrio El Calvario | +504 8765-4321</li>
+          <li><strong>Patty:</strong> Barrio El Polivalente | +504 9512-3456</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Papelerías Langueñas. Todos los derechos reservados.</p>
+      <p class="footer-credits">Desarrolladores web: Estudiantes de III-2 de BTP de Informática del Instituto Técnico Contable J.F.K. 2026.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

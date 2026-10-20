@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Papelerías Langueñas: Red unificada de cuatro papelerías locales en Langue, Valle, Honduras. Papelería Yannet, Alejandrina, San Antonio y Patty.">
+  <title>Inicio | Papelerías Langueñas - Langue, Valle</title>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header Sticky Institucional -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper" aria-label="Ir a la página principal de Papelerías Langueñas">
+        <img src="img/logo.png" alt="Logotipo Oficial de Papelerías Langueñas" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <h1>Papelerías Langueñas</h1>
+          <span>Langue, Valle, Honduras</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Abrir menú de navegación">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li>
+            <button class="btn-cart-nav" id="openCartBtn" aria-label="Ver mi lista de compras">
+              🛒 Mi Lista <span class="cart-counter" id="cartCounter">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero / Banner -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <span class="hero-subtitle">Red Unificada de Útiles & Papelería</span>
+        <h2 class="hero-title">Todo lo que necesitas para tus clases y materias</h2>
+        <p class="hero-description">
+          Integramos a las cuatro papelerías de mayor arraigo en Langue para asegurarte el inventario escolar, artístico y comercial más completo de la región.
+        </p>
+        <a href="productos.html" class="btn-hero">Ver Catálogo General</a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 1: Carrusel de Productos Destacados -->
+    <section class="featured-carousel-section" aria-label="Productos destacados de cada papelería">
+      <div class="carousel-container">
+        <div class="section-title-wrap">
+          <h2 class="section-title">Objetos Destacados</h2>
+          <p class="section-subtitle">Lo más solicitado y esencial de cada una de nuestras cuatro papelerías</p>
+        </div>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="featuredCarouselTrack">
+            <!-- Destacado Yannet -->
+            <article class="carousel-card theme-yannet">
+              <div class="carousel-card-img-wrap">
+                <img src="img/papel-tapiz.png" alt="Papel tapiz de Papelería Yannet" width="260" height="260">
+              </div>
+              <div class="carousel-card-info">
+                <span class="branch-badge yannet">Papelería Yannet • Barrio El Centro</span>
+                <h3 class="carousel-card-title">Papel tapiz</h3>
+                <p class="carousel-card-desc">Viene con estampados ( flores,personajes infantiles o textura,permitiendo transformar el cuaderno u otro objeto en un solo paso.</p>
+                <button class="btn-card-add" onclick="openProductModal('yan-01')">Ver Detalles y Seleccionar</button>
+              </div>
+            </article>
+
+            <!-- Destacado Alejandrina -->
+            <article class="carousel-card theme-alejandrina">
+              <div class="carousel-card-img-wrap">
+                <img src="img/colores-maped.png" alt="Colores maped de Papelería Alejandrina" width="260" height="260">
+              </div>
+              <div class="carousel-card-info">
+                <span class="branch-badge alejandrina">Papelería Alejandrina • Barrio El Centro</span>
+                <h3 class="carousel-card-title">Colores maped</h3>
+                <p class="carousel-card-desc">Colores con buena calidad diseñados para dibujar y colorear, ofrecen colores variados.</p>
+                <button class="btn-card-add" onclick="openProductModal('ale-05')">Ver Detalles y Seleccionar</button>
+              </div>
+            </article>
+
+            <!-- Destacado San Antonio -->
+            <article class="carousel-card theme-sanantonio">
+              <div class="carousel-card-img-wrap">
+                <img src="img/lápiz-tinta.png" alt="Lapiz tinta de Papelería San Antonio" width="260" height="260">
+              </div>
+              <div class="carousel-card-info">
+                <span class="branch-badge sanantonio">Papelería San Antonio • Barrio El Calvario</span>
+                <h3 class="carousel-card-title">Lapiz tinta</h3>
+                <p class="carousel-card-desc">Ideal para escribir apuntes sobre papel,carton etc..</p>
+                <button class="btn-card-add" onclick="openProductModal('san-07')">Ver Detalles y Seleccionar</button>
+              </div>
+            </article>
+
+            <!-- Destacado Patty -->
+            <article class="carousel-card theme-patty">
+              <div class="carousel-card-img-wrap">
+                <img src="img/cuaderno-unico-grande.png" alt="Cuaderno unico grande de Papelería Patty" width="260" height="260">
+              </div>
+              <div class="carousel-card-info">
+                <span class="branch-badge patty">Papelería Patty • Barrio El Polivalente</span>
+                <h3 class="carousel-card-title">Cuaderno unico grande</h3>
+                <p class="carousel-card-desc">Cuaderno único grande ideal para escribir, tomar apuntes y organizar tareas y trabajos.</p>
+                <button class="btn-card-add" onclick="openProductModal('pat-20')">Ver Detalles y Seleccionar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carouselPrevBtn" aria-label="Producto anterior">❮</button>
+          <button class="carousel-btn" id="carouselNextBtn" aria-label="Siguiente producto">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: Apartados de las 4 Papelerías -->
+    <section class="branches-showcase" aria-label="Apartados de las cuatro papelerías asociadas">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Nuestras Cuatro Papelerías</h2>
+        <p class="section-subtitle">Cada establecimiento cuenta con su propia identidad, historia y catálogo dedicado de productos</p>
+      </div>
+
+      <!-- APARTADO 1: PAPELERÍA YANNET -->
+      <article class="branch-showcase-box box-yannet">
+        <img src="img/galeria-2.jpg" alt="Fachada y local de Papelería Yannet" class="branch-bg-cover" loading="lazy">
+        <div class="branch-overlay"></div>
+        <div class="branch-card-content">
+          <span class="branch-location-tag">Barrio El Centro • Langue, Valle</span>
+          <h3 class="branch-card-name">Papelería Yannet</h3>
+          <p class="branch-card-history">
+            Nacida como un emprendimiento familiar para abastecer a las escuelas del casco urbano de Langue, Papelería Yannet es un punto de referencia para docentes y alumnos, destacando por su surtido en papel tapiz, resmas bond, materiales de oficina, textos y fotocopiado continuo.
+          </p>
+          <div class="branch-card-actions">
+            <a href="productos.html?sucursal=yannet" class="btn-branch btn-branch-primary">Entrar a ver catálogo</a>
+            <a href="https://wa.me/50432826211?text=Hola%20Papelería%20Yannet,%20quisiera%20consultar%20sobre%20un%20producto" class="btn-branch btn-branch-whatsapp" target="_blank" rel="noopener">WhatsApp +504 3282-6211</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- APARTADO 2: PAPELERÍA ALEJANDRINA -->
+      <article class="branch-showcase-box box-alejandrina">
+        <img src="img/galeria-3.jpg" alt="Local comercial de Papelería Alejandrina" class="branch-bg-cover" loading="lazy">
+        <div class="branch-overlay"></div>
+        <div class="branch-card-content">
+          <span class="branch-location-tag">Barrio El Centro • Frente al Parque Central</span>
+          <h3 class="branch-card-name">Papelería Alejandrina</h3>
+          <p class="branch-card-history">
+            Fundada con la convicción de ofrecer herramientas especializadas en dibujo arquitectónico, artes plásticas y contabilidad. Su atención cordial y variedad de cartulinas, pinturas, compases y libros de actas forman parte de la vida académica langueña.
+          </p>
+          <div class="branch-card-actions">
+            <a href="productos.html?sucursal=alejandrina" class="btn-branch btn-branch-primary">Entrar a ver catálogo</a>
+            <a href="https://wa.me/50498765432?text=Hola%20Papelería%20Alejandrina,%20quisiera%20consultar%20sobre%20un%20producto" class="btn-branch btn-branch-whatsapp" target="_blank" rel="noopener">WhatsApp +504 9876-5432</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- APARTADO 3: PAPELERÍA SAN ANTONIO -->
+      <article class="branch-showcase-box box-sanantonio">
+        <img src="img/galeria-4.jpg" alt="Establecimiento de Papelería San Antonio en Barrio El Calvario" class="branch-bg-cover" loading="lazy">
+        <div class="branch-overlay"></div>
+        <div class="branch-card-content">
+          <span class="branch-location-tag">Barrio El Calvario • Sector Iglesia</span>
+          <h3 class="branch-card-name">Papelería San Antonio</h3>
+          <p class="branch-card-history">
+            Inició como un negocio comunitario para acercar los útiles escolares y materiales de manualidades a las familias del Barrio El Calvario. Con el tiempo amplió sus servicios con insumos para maquetas, material preescolar y papelería comercial contable.
+          </p>
+          <div class="branch-card-actions">
+            <a href="productos.html?sucursal=sanantonio" class="btn-branch btn-branch-primary">Entrar a ver catálogo</a>
+            <a href="https://wa.me/50487654321?text=Hola%20Papelería%20San%20Antonio,%20quisiera%20consultar%20sobre%20un%20producto" class="btn-branch btn-branch-whatsapp" target="_blank" rel="noopener">WhatsApp +504 8765-4321</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- APARTADO 4: PAPELERÍA PATTY -->
+      <article class="branch-showcase-box box-patty">
+        <img src="img/galeria-5.jpg" alt="Establecimiento de Papelería Patty en Barrio El Polivalente" class="branch-bg-cover" loading="lazy">
+        <div class="branch-overlay"></div>
+        <div class="branch-card-content">
+          <span class="branch-location-tag">Barrio El Polivalente • Zona Estudiantil</span>
+          <h3 class="branch-card-name">Papelería Patty</h3>
+          <p class="branch-card-history">
+            Instalada junto al Instituto Polivalente de Langue, su historia se enfoca en atender las exigencias de talleres vocacionales, ciclos diversificados y ferias de ciencias, proveyendo cuadernos de alto volumen, reglas, plastilina y cuestionarios cívicos.
+          </p>
+          <div class="branch-card-actions">
+            <a href="productos.html?sucursal=patty" class="btn-branch btn-branch-primary">Entrar a ver catálogo</a>
+            <a href="https://wa.me/50495123456?text=Hola%20Papelería%20Patty,%20quisiera%20consultar%20sobre%20un%20producto" class="btn-branch btn-branch-whatsapp" target="_blank" rel="noopener">WhatsApp +504 9512-3456</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal Emergente de Producto Rápido -->
+  <div class="modal-backdrop" id="productQuickModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana emergente">✕</button>
+      <div class="modal-content-grid">
+        <div class="modal-img-wrapper" id="modalImgWrapper"></div>
+        <div class="modal-details">
+          <span class="modal-branch-tag" id="modalBranchTag"></span>
+          <h3 class="modal-product-title" id="modalProductTitle"></h3>
+          <p class="modal-product-desc" id="modalProductDesc"></p>
+          
+          <div class="modal-pricing-disclaimer">
+            <strong>Aviso de precios:</strong> Debido a la constante variación en costos de importación y rotación de stock, los precios se confirman directamente al momento de consultar vía WhatsApp o en ventanilla física.
+          </div>
+
+          <div class="modal-qty-selector">
+            <label for="modalQtyInput"><strong>Cantidad requerida:</strong></label>
+            <div class="qty-controls">
+              <button class="qty-btn" id="modalQtyDecrease" aria-label="Restar">-</button>
+              <input type="number" id="modalQtyInput" class="qty-input" value="1" min="1" max="99">
+              <button class="qty-btn" id="modalQtyIncrease" aria-label="Sumar">+</button>
+            </div>
+          </div>
+
+          <button class="btn-add-to-cart" id="btnModalAddToCart">Añadir a mi lista de compras</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel Lateral del Carrito (Exclusivo para 1 sola papelería) -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Lista de compras" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Mi Lista de Artículos</h3>
+      <button class="modal-close-btn" id="closeCartBtn" aria-label="Cerrar lista">✕</button>
+    </div>
+
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+
+    <div id="cartEmptyNotice" style="padding: 2.5rem; text-align: center; color: #6b7280;">
+      <p>Tu lista se encuentra vacía.</p>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <!-- Indicador de la única papelería del pedido -->
+      <div class="cart-exclusive-branch-box" id="cartExclusiveBranchBox"></div>
+
+      <button class="btn-clear-cart" id="clearCartBtn">Vaciar lista para ordenar en otra papelería</button>
+
+      <button class="btn-send-whatsapp-order" id="sendWhatsAppOrderBtn">
+        📲 Enviar Pedido a WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- Botón Flotante Global WhatsApp -->
+  <a href="https://wa.me/50432826211?text=Hola,%20me%20comunico%20desde%20el%20sitio%20web%20de%20Papelerías%20Langueñas." 
+     class="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="Atención por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.124-.518-1.527-.633-2.52-2.184-2.597-2.285-.077-.101-.62-8.27-.62-1.58 0-.753.395-1.123.535-1.267.14-.144.306-.18.408-.18.102 0 .204.002.293.007.094.005.219-.036.342.26.126.307.433 1.054.471 1.132.038.077.064.168.013.27-.051.102-.077.166-.153.255-.077.09-.161.2-.23.27-.077.078-.158.163-.068.318.09.155.4 1.134.858 1.543.59.525 1.088.688 1.243.766.155.077.247.068.339-.038.093-.105.395-.46.501-.617.106-.157.211-.131.354-.078.144.053.91.429 1.068.508.158.078.263.118.302.183.039.065.039.378-.105.783z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Papelerías Langueñas</h3>
+        <p>Red de comercios locales para el suministro escolar, comercial y técnico en Langue, Valle, Honduras.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nuestras Cuatro Sedes</h4>
+        <ul class="branch-contact-list">
+          <li><strong>Papelería Yannet:</strong> Barrio El Centro | Tel: +504 3282-6211</li>
+          <li><strong>Papelería Alejandrina:</strong> Barrio El Centro | Tel: +504 9876-5432</li>
+          <li><strong>Papelería San Antonio:</strong> Barrio El Calvario | Tel: +504 8765-4321</li>
+          <li><strong>Papelería Patty:</strong> Barrio El Polivalente | Tel: +504 9512-3456</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Catálogo Completo</a></li>
+          <li><a href="servicios.html">Servicios & Reprografía</a></li>
+          <li><a href="contacto.html">Contacto Directo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Papelerías Langueñas. Todos los derechos reservados.</p>
+      <p class="footer-credits">Desarrolladores web: Estudiantes de III-2 de BTP de Informática del Instituto Técnico Contable J.F.K. 2026.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

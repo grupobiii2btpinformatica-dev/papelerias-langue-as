@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto directo con las cuatro papelerías de Langue, Valle. Teléfonos +504, formulario integrado y mapa de ubicación.">
+  <title>Contacto | Papelerías Langueñas</title>
+  
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-wrapper">
+        <img src="img/logo.png" alt="Logotipo Oficial de Papelerías Langueñas" class="brand-logo" width="48" height="48">
+        <div class="brand-text">
+          <h1>Papelerías Langueñas</h1>
+          <span>Langue, Valle, Honduras</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+          <li>
+            <button class="btn-cart-nav" id="openCartBtn">
+              🛒 Mi Lista <span class="cart-counter" id="cartCounter">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <h1>Contáctanos Directamente</h1>
+      <p>Envíanos tus consultas institucionales o visítanos en cualquiera de nuestros cuatro puntos en Langue.</p>
+    </section>
+
+    <section class="content-section">
+      <div class="contact-grid">
+        <!-- Formulario Formspree -->
+        <div class="contact-form">
+          <h2 style="font-family: var(--font-heading); color: var(--alejandrina-primary); margin-bottom: 1.25rem;">Mensaje Escrito</h2>
+          <form action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
+            <div class="form-group">
+              <label for="fullName">Nombre Completo *</label>
+              <input type="text" id="fullName" name="name" required placeholder="Ej. Juan Pérez">
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddr">Correo Electrónico *</label>
+              <input type="email" id="emailAddr" name="_replyto" required placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNum">Teléfono / WhatsApp</label>
+              <input type="tel" id="phoneNum" name="phone" placeholder="+504 0000-0000">
+            </div>
+
+            <div class="form-group">
+              <label for="branchSelect">Papelería de Destino</label>
+              <select id="branchSelect" name="branch">
+                <option value="general">Cualquiera / Consulta General</option>
+                <option value="yannet">Papelería Yannet (Barrio El Centro)</option>
+                <option value="alejandrina">Papelería Alejandrina (Barrio El Centro)</option>
+                <option value="sanantonio">Papelería San Antonio (Barrio El Calvario)</option>
+                <option value="patty">Papelería Patty (Barrio El Polivalente)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="messageText">Mensaje o Detalle del Pedido *</label>
+              <textarea id="messageText" name="message" rows="5" required placeholder="Escribe aquí tu consulta o cotización..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Formulario</button>
+          </form>
+        </div>
+
+        <!-- Mapa de Langue, Valle -->
+        <div class="map-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Langue,%20Valle,%20Honduras&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            loading="lazy" 
+            title="Ubicación de las papelerías en Langue, Valle, Honduras">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Drawer Carrito -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Mi Lista de Artículos</h3>
+      <button class="modal-close-btn" id="closeCartBtn">✕</button>
+    </div>
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+    <div id="cartEmptyNotice" style="padding: 2.5rem; text-align: center; color: #6b7280;">Tu lista se encuentra vacía.</div>
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-exclusive-branch-box" id="cartExclusiveBranchBox"></div>
+      <button class="btn-clear-cart" id="clearCartBtn">Vaciar lista para ordenar en otra papelería</button>
+      <button class="btn-send-whatsapp-order" id="sendWhatsAppOrderBtn">📲 Enviar Pedido a WhatsApp</button>
+    </div>
+  </aside>
+
+  <a href="https://wa.me/50432826211" class="whatsapp-float-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.124-.518-1.527-.633-2.52-2.184-2.597-2.285-.077-.101-.62-8.27-.62-1.58 0-.753.395-1.123.535-1.267.14-.144.306-.18.408-.18.102 0 .204.002.293.007.094.005.219-.036.342.26.126.307.433 1.054.471 1.132.038.077.064.168.013.27-.051.102-.077.166-.153.255-.077.09-.161.2-.23.27-.077.078-.158.163-.068.318.09.155.4 1.134.858 1.543.59.525 1.088.688 1.243.766.155.077.247.068.339-.038.093-.105.395-.46.501-.617.106-.157.211-.131.354-.078.144.053.91.429 1.068.508.158.078.263.118.302.183.039.065.039.378-.105.783z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Papelerías Langueñas</h3>
+        <p>Al servicio de los niños, jóvenes y profesionales de Langue, Valle, Honduras.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sucursales</h4>
+        <ul class="branch-contact-list">
+          <li><strong>Yannet:</strong> Barrio El Centro | +504 3282-6211</li>
+          <li><strong>Alejandrina:</strong> Barrio El Centro | +504 9876-5432</li>
+          <li><strong>San Antonio:</strong> Barrio El Calvario | +504 8765-4321</li>
+          <li><strong>Patty:</strong> Barrio El Polivalente | +504 9512-3456</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Papelerías Langueñas. Todos los derechos reservados.</p>
+      <p class="footer-credits">Desarrolladores web: Estudiantes de III-2 de BTP de Informática del Instituto Técnico Contable J.F.K. 2026.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
